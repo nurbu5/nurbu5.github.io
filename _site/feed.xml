@@ -1,1 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-06T20:35:14-06:00</updated><id>http://localhost:4000/</id><title type="html">Sherpa’s blog</title><subtitle></subtitle></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-12-16T13:35:36-07:00</updated><id>http://localhost:4000/</id><title type="html">Sherpa’s blog</title><subtitle></subtitle><entry><title type="html">SpaceShooter Game</title><link href="http://localhost:4000/unity/tutorials/2017/12/16/test.html" rel="alternate" type="text/html" title="SpaceShooter Game" /><published>2017-12-16T00:00:00-07:00</published><updated>2017-12-16T00:00:00-07:00</updated><id>http://localhost:4000/unity/tutorials/2017/12/16/test</id><content type="html" xml:base="http://localhost:4000/unity/tutorials/2017/12/16/test.html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en-us&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;/files/TemplateData/favicon.ico&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/files/TemplateData/style.css&quot;&gt;
+    &lt;script src=&quot;/files/TemplateData/UnityProgress.js&quot;&gt;&lt;/script&gt;  
+    &lt;script src=&quot;/files/Build/UnityLoader.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+      var gameInstance = UnityLoader.instantiate(&quot;gameContainer&quot;, &quot;/files/Build/Space_Shooter.json&quot;, {onProgress: UnityProgress});
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;
+      A pretty basic game I built in Unity by following
+      &lt;a href=&quot;https://unity3d.com/learn/tutorials/s/space-shooter-tutorial&quot;&gt;these&lt;/a&gt; 
+      tutorials. The game might take a few seconds to load.
+    &lt;/p&gt;
+    &lt;p&gt;
+      Instructions:
+      Move using the arrow keys and shoot with the Alt key.
+      If you lose you can start a new game with 'R' after the wave has ended.
+    &lt;/p&gt;
+    &lt;div class=&quot;webgl-content&quot;&gt;
+      &lt;div id=&quot;gameContainer&quot; style=&quot;width: 600px; height: 900px; margin: 0 auto;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br/&gt;
+    &lt;br/&gt;
+    &lt;p&gt;
+      In future iterations, I'll try to add a button to mute or lower the volume, and 
+      have the game resize with the window.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</content><author><name></name></author><summary type="html">A pretty basic game I built in Unity by following these tutorials. The game might take a few seconds to load. Instructions: Move using the arrow keys and shoot with the Alt key. If you lose you can start a new game with 'R' after the wave has ended. In future iterations, I'll try to add a button to mute or lower the volume, and have the game resize with the window.</summary></entry></feed>

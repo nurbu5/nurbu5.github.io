@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-![dawa-sherpa](../files/profile_picture.jpg){:style="float: right;"}
+![dawa-sherpa](/files/profile_picture.jpg){:style="float: right;"}
 
 Hi my name is Dawa Nurbu Sherpa. I was born in Kathmandu, Nepal, and my family moved overseas when I was three. On the weekends
 I like to hike and play chess with my friends at the local coffee shop.

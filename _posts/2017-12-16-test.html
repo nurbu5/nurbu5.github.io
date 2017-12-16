@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "SpaceShooter Game"
+categories: Unity Tutorials
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="/files/TemplateData/favicon.ico">
+    <link rel="stylesheet" href="/files/TemplateData/style.css">
+    <script src="/files/TemplateData/UnityProgress.js"></script>  
+    <script src="/files/Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "/files/Build/Space_Shooter.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <p>
+      A pretty basic game I built in Unity by following
+      <a href="https://unity3d.com/learn/tutorials/s/space-shooter-tutorial">these</a> 
+      tutorials. The game might take a few seconds to load.
+    </p>
+    <p>
+      Instructions:
+      Move using the arrow keys and shoot with the Alt key.
+      If you lose you can start a new game with 'R' after the wave has ended.
+    </p>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 600px; height: 900px; margin: 0 auto;"></div>
+    </div>
+    <br/>
+    <br/>
+    <p>
+      In future iterations, I'll try to add a button to mute or lower the volume, and 
+      have the game resize with the window.
+    </p>
+  </body>
+</html>
+
