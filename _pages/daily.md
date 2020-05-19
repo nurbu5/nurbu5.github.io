@@ -1,6 +1,6 @@
 ---
-layout: post
-hidden: true
+layout: page
+permalink: /todo
 ---
 
 # Reminders:
