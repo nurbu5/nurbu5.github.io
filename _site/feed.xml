@@ -1,35 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-19T17:07:35-06:00</updated><id>http://localhost:4000/</id><title type="html">Sherpa’s blog</title><subtitle></subtitle><entry><title type="html">SpaceShooter Game</title><link href="http://localhost:4000/unity/tutorials/2017/12/16/test.html" rel="alternate" type="text/html" title="SpaceShooter Game" /><published>2017-12-16T00:00:00-07:00</published><updated>2017-12-16T00:00:00-07:00</updated><id>http://localhost:4000/unity/tutorials/2017/12/16/test</id><content type="html" xml:base="http://localhost:4000/unity/tutorials/2017/12/16/test.html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en-us&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
-    &lt;link rel=&quot;shortcut icon&quot; href=&quot;/files/TemplateData/favicon.ico&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;/files/TemplateData/style.css&quot;&gt;
-    &lt;script src=&quot;/files/TemplateData/UnityProgress.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;/files/Build/UnityLoader.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      var gameInstance = UnityLoader.instantiate(&quot;gameContainer&quot;, &quot;/files/Build/Space_Shooter.json&quot;, {onProgress: UnityProgress});
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;
-      A pretty basic game I built in Unity by following
-      &lt;a href=&quot;https://unity3d.com/learn/tutorials/s/space-shooter-tutorial&quot;&gt;these&lt;/a&gt;
-      tutorials. The game might take a few seconds to load.
-    &lt;/p&gt;
-    &lt;p&gt;
-      Instructions:
-      Move using the arrow keys and shoot with the Alt key.
-      If you lose you can start a new game with 'R' after the wave has ended.
-    &lt;/p&gt;
-    &lt;div class=&quot;webgl-content&quot;&gt;
-      &lt;div id=&quot;gameContainer&quot; style=&quot;width: 600px; height: 900px; margin: 0 auto;&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;br/&gt;
-    &lt;br/&gt;
-    &lt;p&gt;
-      In future iterations, I'll try to add a button to mute or lower the volume, and 
-      have the game resize with the window.
-    &lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</content><author><name></name></author><summary type="html">A pretty basic game I built in Unity by following these tutorials. The game might take a few seconds to load. Instructions: Move using the arrow keys and shoot with the Alt key. If you lose you can start a new game with 'R' after the wave has ended. In future iterations, I'll try to add a button to mute or lower the volume, and have the game resize with the window.</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-08T12:34:50-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Sherpa’s blog</title><subtitle></subtitle><entry><title type="html">Pug Game</title><link href="http://localhost:4000/unity/projects/2022/05/08/test.html" rel="alternate" type="text/html" title="Pug Game" /><published>2022-05-08T00:00:00-06:00</published><updated>2022-05-08T00:00:00-06:00</updated><id>http://localhost:4000/unity/projects/2022/05/08/test</id><content type="html" xml:base="http://localhost:4000/unity/projects/2022/05/08/test.html"><![CDATA[<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Pug walk</title>
+    <link rel="shortcut icon" href="/files/TemplateData/favicon.ico">
+    <link rel="stylesheet" href="/files/TemplateData/style.css">
+		<style type="text/css" media="screen">
+			.wrapper {
+					max-width: 960px !important;
+			}
+		</style>
+  </head>
+  <body>
+		<div>
+			<p>A short pug game I'm working on. There's not a lot going on here.</p>
+			<p>You can move using the arrow keys.</p>
+			<br/>
+			<p>
+				Thanks to the team building <a href="http://superpowers-html5.com/">Superpowers</a>
+				for providing most of the assets I used.
+			</p>
+			<p>
+				Thanks to <a href="https://soundcloud.com/dopplertunes">dopplertunes</a> for writing the background music.
+			</p>
+		</div>
+
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">Pug walk</div>
+      </div>
+    </div>
+
+    <script>
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var warningBanner = document.querySelector("#unity-warning");
+
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+
+      var buildUrl = "/files/Build";
+      var loaderUrl = buildUrl + "/UnityBuilds.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/UnityBuilds.data",
+        frameworkUrl: buildUrl + "/UnityBuilds.framework.js",
+        codeUrl: buildUrl + "/UnityBuilds.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "Pug walk",
+        productVersion: "1.0",
+        showBanner: unityShowBanner,
+      };
+
+      // By default Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+
+        // To lower canvas resolution on mobile devices to gain some
+        // performance, uncomment the following line:
+        // config.devicePixelRatio = 1;
+
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+
+        unityShowBanner('WebGL builds are not supported on mobile devices.');
+      } else {
+        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
+      }
+
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>]]></content><author><name></name></author><category term="Unity" /><category term="Projects" /><summary type="html"><![CDATA[Unity WebGL Player | Pug walk A short pug game I'm working on. There's not a lot going on here. You can move using the arrow keys. Thanks to the team building Superpowers for providing most of the assets I used. Thanks to dopplertunes for writing the background music.]]></summary></entry></feed>
